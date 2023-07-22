@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:testing_with_route_stubs_flutter/pages/home_page.dart';
-import 'package:testing_with_route_stubs_flutter/pages/login_page.dart';
+import 'package:testing_with_route_stubs_flutter/di/container.dart';
+import 'package:testing_with_route_stubs_flutter/infrastructure/infra_dependencies.dart';
+import 'package:testing_with_route_stubs_flutter/presentation/pages/home_page.dart';
+import 'package:testing_with_route_stubs_flutter/presentation/pages/login_page.dart';
 
 class Routing {
   static const String loginRoute = "/";
@@ -10,7 +12,9 @@ class Routing {
     switch (settings.name) {
       case Routing.homeRoute:
         return MaterialPageRoute(
-          builder: (context) => const HomePage(),
+          builder: (context) => HomePage(
+            homeDataSource: sl<HomeRemoteDataSource>(),
+          ),
           settings: settings,
         );
 
