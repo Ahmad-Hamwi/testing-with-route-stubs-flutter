@@ -10,6 +10,8 @@ class LoginPage extends StatelessWidget {
     Navigator.of(context).pushNamedAndRemoveUntil(
       Routing.homeRoute,
       (route) => false,
+      arguments:
+          "This is a text passed as an argument as a demo.",
     );
   }
 

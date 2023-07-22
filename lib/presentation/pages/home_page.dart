@@ -51,8 +51,9 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Text(widget.textArgument),
+            Text(widget.textArgument, textAlign: TextAlign.center),
             const SizedBox(height: 48),
             Text(data ?? "No data fetched yet"),
           ],
