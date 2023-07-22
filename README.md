@@ -1,16 +1,8 @@
-# testing_with_route_stubs_flutter
+# Testing with route stubs - Flutter
 
-A Flutter project in which I demonstrate how to stub routes in integration tests
+A Flutter project in which I demonstrated how to stub routes in widget & integration tests
 
-## Getting Started
+## Medium article
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Here's a [Medium article](https://ahmad-hamwi.medium.com/stubbing-navigation-routes-in-widget-integration-tests-in-your-flutter-app-51f71963d4d0) link explaining the problem of testing navigation and it has been solved
+using the code in this repository.
