@@ -3,9 +3,14 @@ import 'package:testing_with_route_stubs_flutter/di/container.dart';
 import 'package:testing_with_route_stubs_flutter/infrastructure/infra_dependencies.dart';
 
 class HomePage extends StatefulWidget {
+  final String textArgument;
   final HomeRemoteDataSource homeDataSource;
 
-  const HomePage({Key? key, required this.homeDataSource}) : super(key: key);
+  const HomePage({
+    Key? key,
+    required this.textArgument,
+    required this.homeDataSource,
+  }) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -45,7 +50,13 @@ class _HomePageState extends State<HomePage> {
         title: const Text("Home"),
       ),
       body: Center(
-        child: Text(data ?? "No data fetched yet"),
+        child: Column(
+          children: [
+            Text(widget.textArgument),
+            const SizedBox(height: 48),
+            Text(data ?? "No data fetched yet"),
+          ],
+        ),
       ),
     );
   }
