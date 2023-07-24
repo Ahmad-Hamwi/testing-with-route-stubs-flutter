@@ -20,8 +20,6 @@ class _HomePageState extends State<HomePage> {
   String? data;
 
   Future<void> _fetchData() async {
-    sl<AnalyticsService>().logEvent("home_page_entered");
-
     setState(() => data = "Fetching...");
 
     try {
@@ -37,6 +35,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
+    sl<AnalyticsService>().logEvent("home_page_entered");
+    
     _fetchData();
 
     super.initState();
